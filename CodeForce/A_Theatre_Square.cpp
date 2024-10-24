@@ -1,28 +1,20 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main()
 {
-    int count = 0;
-
-    int m,n;
-    cin>>m>>n;
-
-    int a;
-    cin>>a;
-
-    if(a >= m && m == n) {
-        cout<<0<<endl;
-        return 0;
+    long long n, m, a;
+    cin >> n >> m >> a;
+    long long x = n / a;
+    long long y = m / a;
+    if (n % a != 0)
+    {
+        x++;
     }
-    if(m > n){
-        while(m < a){
-            count++;
-            m = m-a;
-            n = n-a;
-        }
+    if (m % a != 0)
+    {
+        y++;
     }
+    cout << x * y;
     
-    
-
     return 0;
 }
